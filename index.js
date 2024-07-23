@@ -43,6 +43,16 @@ async function initialLoad(){
  * - Each new selection should clear, re-populate, and restart the Carousel.
  * - Add a call to this function to the end of your initialLoad function above to create the initial carousel.
  */
+let breedSelectDrodwn = document.createElementById("breedSelect").addEventListener('click', drpdwn);
+
+async function drpdwn() {
+  fetch(' https://api.thecatapi.com/v1/images/search?limit=10')
+  .then(res => res.json());
+
+}
+
+
+
 
 /**
  * 3. Fork your own sandbox, creating a new one named "JavaScript Axios Lab."
